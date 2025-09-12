@@ -1,0 +1,4 @@
+description,location_name,location_address,latitude,longitude,enabled,imei
+empty234,empty23,empty234,324535435435,345345345354,true,string435345
+desc2,loc2,addr2,1111111,2222222,false,imei2222
+desc3,loc3,addr3,3333333,4444444,true,imei3333
