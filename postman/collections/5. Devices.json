@@ -110,7 +110,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"description\": \"empty\",\n  \"location_name\": \"empty\",\n  \"location_address\": \"empty\",\n  \"latitude\": \"empty\",\n  \"longitude\": \"empty\",\n  \"enabled\": true,\n  \"imei\": \"string435\"\n}\n",
+					"raw": "{\n  \"description\": \"empty234\",\n  \"location_name\": \"empty23\",\n  \"location_address\": \"empty234\",\n  \"latitude\": \"324535435435\",\n  \"longitude\": \"345345345354\",\n  \"enabled\": true,\n  \"imei\": \"string435345\"\n}\n",
 					"options": {
 						"raw": {
 							"language": "json"
