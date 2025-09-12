@@ -109,8 +109,15 @@
 					}
 				],
 				"body": {
-					"mode": "raw",
-					"raw": "{\n  \"description\": \"empty234\",\n  \"location_name\": \"empty23\",\n  \"location_address\": \"empty234\",\n  \"latitude\": \"324535435435\",\n  \"longitude\": \"345345345354\",\n  \"enabled\": true,\n  \"imei\": \"string435345\"\n}\n",
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "",
+							"type": "file",
+							"uuid": "e9b60df4-07bd-41ac-9b61-2d54cb3c0e2d",
+							"src": "/Users/brainxtechnologies3960/Documents/postman-test-data.csv"
+						}
+					],
 					"options": {
 						"raw": {
 							"language": "json"
