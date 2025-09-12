@@ -34,6 +34,7 @@
 							"pm.test(\"Response time is under 1000ms\", function () {",
 							"    pm.expect(pm.response.responseTime).to.be.below(1000);",
 							"});",
+							"",
 							""
 						],
 						"type": "text/javascript",
@@ -107,7 +108,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"description\": \"empty\",\n  \"location_name\": \"empty\",\n  \"location_address\": \"empty\",\n  \"latitude\": \"empty\",\n  \"longitude\": \"empty\",\n  \"enabled\": true,\n  \"imei\": \"string435\"\n}",
+					"raw": "{\n  \"description\": \"empty\",\n  \"location_name\": \"empty\",\n  \"location_address\": \"empty\",\n  \"latitude\": \"empty\",\n  \"longitude\": \"empty\",\n  \"enabled\": true,\n  \"imei\": \"string435\"\n}\n",
 					"options": {
 						"raw": {
 							"language": "json"
