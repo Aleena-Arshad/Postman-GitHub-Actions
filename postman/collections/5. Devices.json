@@ -100,7 +100,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"description\": \"{{description}}\",\n  \"location_name\": \"{{location_name}}\",\n  \"location_address\": \"{{location_address}}\",\n  \"latitude\": \"{{latitude}}\",\n  \"longitude\": \"{{longitude}}\",\n  \"enabled\": {{enabled}},\n  \"imei\": \"{{imei}}\"\n}\n\n",
+					"raw": "{\n  \"description\": \"{{description}}\",\n  \"location_name\": \"{{location_name}}\",\n  \"location_address\": \"{{location_address}}\",\n  \"latitude\": \"{{latitude}}\",\n  \"longitude\": \"{{longitude}}\",\n  \"enabled\": {{enabled}},\n  \"imei\": \"{{imei}}\"\n}\n\n\n",
 					"options": {
 						"raw": {
 							"language": "json"
