@@ -62,7 +62,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"email\": \"test_cust@test.se\",\n  \"password\": \"21_resonanS_5_Balsam\"\n}\n\n\n",
+					"raw": "{\n  \"email\": \"test_cust@test.se\",\n  \"password\": \"21_resonanS_5_Balsam\"\n}\n\n\n\n",
 					"options": {
 						"raw": {
 							"language": "json"
