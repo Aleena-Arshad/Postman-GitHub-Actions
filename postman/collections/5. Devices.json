@@ -8,6 +8,28 @@
 	"item": [
 		{
 			"name": "Customer Login",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "43db84a0-1974-42d6-9ef1-0ae3d5c824ad",
+						"exec": [
+							"//  Status code is 200 (OK)",
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"// Response time is less than 1000ms",
+							"pm.test(\"Response time is under 1000ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(1000);",
+							"});",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
 			"id": "ddc55c0e-7342-4245-8a0e-4ecf89a3f655",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
@@ -26,7 +48,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"email\": \"test_cust@test.se\",\n  \"password\": \"21_resonanS_5_Balsam\"\n}\n",
+					"raw": "{\n  \"email\": \"test_cust@test.se\",\n  \"password\": \"21_resonanS_5_Balsam\"\n}\n\n\n",
 					"options": {
 						"raw": {
 							"language": "json"
