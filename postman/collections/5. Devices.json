@@ -14,8 +14,7 @@
 					"script": {
 						"id": "43db84a0-1974-42d6-9ef1-0ae3d5c824ad",
 						"exec": [
-							"let response = pm.response.json();",
-							"pm.environment.set(\"jwt\", response .jwt);"
+							""
 						],
 						"type": "text/javascript",
 						"packages": {}
@@ -35,6 +34,8 @@
 							"pm.test(\"Response time is under 1000ms\", function () {",
 							"    pm.expect(pm.response.responseTime).to.be.below(1000);",
 							"});",
+							"let response = pm.response.json();",
+							"pm.environment.set(\"jwt\", response.jwt);",
 							"",
 							""
 						],
