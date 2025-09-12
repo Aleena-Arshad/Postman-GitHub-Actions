@@ -14,6 +14,17 @@
 					"script": {
 						"id": "43db84a0-1974-42d6-9ef1-0ae3d5c824ad",
 						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "b97f330d-7b0f-4bf2-b1ac-a1c7f9b43a66",
+						"exec": [
 							"//  Status code is 200 (OK)",
 							"pm.test(\"Status code is 200\", function () {",
 							"    pm.response.to.have.status(200);",
