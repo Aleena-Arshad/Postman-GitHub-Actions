@@ -1,0 +1,199 @@
+{
+	"info": {
+		"_postman_id": "3dd17e09-a21d-4373-809a-132ed07917b2",
+		"name": "5. Devices",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_uid": "21661880-3dd17e09-a21d-4373-809a-132ed07917b2"
+	},
+	"item": [
+		{
+			"name": "Customer Login",
+			"id": "ddc55c0e-7342-4245-8a0e-4ecf89a3f655",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"test_cust@test.se\",\n  \"password\": \"21_resonanS_5_Balsam\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://people.nilsask.se/login/",
+					"protocol": "https",
+					"host": [
+						"people",
+						"nilsask",
+						"se"
+					],
+					"path": [
+						"login",
+						""
+					]
+				},
+				"description": "Generated from cURL: curl -X 'POST' \\\n  'https://people.nilsask.se/login/' \\\n  -H 'accept: application/json' \\\n  -H 'Content-Type: application/json' \\\n  -d '{\n  \"email\": \"test_owner@test.se\",\n  \"password\": \"21_resonanS_5_Balsam\"\n}'"
+			},
+			"response": []
+		},
+		{
+			"name": "1. Create Device",
+			"id": "ce3b51b4-a40d-4918-b2e2-83c598ec9fb4",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NTY4ODU0NjcsImlzcyI6Ik5pbHNhc2sgU29mdHdhcmUgQUIiLCJ1c2VyX2lkIjoxMywidXNlcl9lbWFpbCI6InRlc3RfY3VzdEB0ZXN0LnNlIiwidXNlcl9yb2xlIjozMCwib3JnX2lkIjo0LCJqd3RfdHlwZSI6MTB9.agraTwyQWhcvG0l7mq4syLWUSvM-O3R8wxgTzIVhepQ"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"description\": \"empty\",\n  \"location_name\": \"empty\",\n  \"location_address\": \"empty\",\n  \"latitude\": \"empty\",\n  \"longitude\": \"empty\",\n  \"enabled\": true,\n  \"imei\": \"string435\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://people.nilsask.se/devices/own/",
+					"protocol": "https",
+					"host": [
+						"people",
+						"nilsask",
+						"se"
+					],
+					"path": [
+						"devices",
+						"own",
+						""
+					]
+				},
+				"description": "Generated from cURL: curl -X 'POST' \\\n  'https://people.nilsask.se/devices/own/' \\\n  -H 'accept: application/json' \\\n  -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NTY4ODU0NjcsImlzcyI6Ik5pbHNhc2sgU29mdHdhcmUgQUIiLCJ1c2VyX2lkIjoxMywidXNlcl9lbWFpbCI6InRlc3RfY3VzdEB0ZXN0LnNlIiwidXNlcl9yb2xlIjozMCwib3JnX2lkIjo0LCJqd3RfdHlwZSI6MTB9.agraTwyQWhcvG0l7mq4syLWUSvM-O3R8wxgTzIVhepQ' \\\n  -H 'Content-Type: application/json' \\\n  -d '{\n  \"description\": \"empty\",\n  \"location_name\": \"empty\",\n  \"location_address\": \"empty\",\n  \"latitude\": \"empty\",\n  \"longitude\": \"empty\",\n  \"enabled\": true,\n  \"imei\": \"string435\"\n}'"
+			},
+			"response": []
+		},
+		{
+			"name": "2. Update Device",
+			"id": "e6acdf95-5425-4a80-b4f4-e0ddacd402f3",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NTY4ODkyOTEsImlzcyI6Ik5pbHNhc2sgU29mdHdhcmUgQUIiLCJ1c2VyX2lkIjoxMywidXNlcl9lbWFpbCI6InRlc3RfY3VzdEB0ZXN0LnNlIiwidXNlcl9yb2xlIjozMCwib3JnX2lkIjo0LCJqd3RfdHlwZSI6MTB9._SW0vbBNoXADT5-W_QACIu35CzhmfUV5-9IgsqStbjc"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"description\": \"empty\",\n  \"location_name\": \"empty\",\n  \"location_address\": \"empty\",\n  \"latitude\": \"empty\",\n  \"longitude\": \"empty\",\n  \"enabled\": true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://people.nilsask.se/devices/own/38/",
+					"protocol": "https",
+					"host": [
+						"people",
+						"nilsask",
+						"se"
+					],
+					"path": [
+						"devices",
+						"own",
+						"38",
+						""
+					]
+				},
+				"description": "Generated from cURL: curl -X 'PUT' \\\n  'https://people.nilsask.se/devices/own/38/' \\\n  -H 'accept: application/json' \\\n  -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NTY4ODkyOTEsImlzcyI6Ik5pbHNhc2sgU29mdHdhcmUgQUIiLCJ1c2VyX2lkIjoxMywidXNlcl9lbWFpbCI6InRlc3RfY3VzdEB0ZXN0LnNlIiwidXNlcl9yb2xlIjozMCwib3JnX2lkIjo0LCJqd3RfdHlwZSI6MTB9._SW0vbBNoXADT5-W_QACIu35CzhmfUV5-9IgsqStbjc' \\\n  -H 'Content-Type: application/json' \\\n  -d '{\n  \"description\": \"empty\",\n  \"location_name\": \"empty\",\n  \"location_address\": \"empty\",\n  \"latitude\": \"empty\",\n  \"longitude\": \"empty\",\n  \"enabled\": true\n}'"
+			},
+			"response": []
+		},
+		{
+			"name": "3. Get Devices",
+			"id": "238b873b-c58a-4e0b-b14b-627d37b0c9ed",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NTY4ODkyOTEsImlzcyI6Ik5pbHNhc2sgU29mdHdhcmUgQUIiLCJ1c2VyX2lkIjoxMywidXNlcl9lbWFpbCI6InRlc3RfY3VzdEB0ZXN0LnNlIiwidXNlcl9yb2xlIjozMCwib3JnX2lkIjo0LCJqd3RfdHlwZSI6MTB9._SW0vbBNoXADT5-W_QACIu35CzhmfUV5-9IgsqStbjc"
+					}
+				],
+				"url": {
+					"raw": "https://people.nilsask.se/devices/own/?offset=0&limit=100",
+					"protocol": "https",
+					"host": [
+						"people",
+						"nilsask",
+						"se"
+					],
+					"path": [
+						"devices",
+						"own",
+						""
+					],
+					"query": [
+						{
+							"key": "offset",
+							"value": "0"
+						},
+						{
+							"key": "limit",
+							"value": "100"
+						}
+					]
+				},
+				"description": "Generated from cURL: curl -X 'GET' \\\n  'https://people.nilsask.se/devices/own/?offset=0&limit=100' \\\n  -H 'accept: application/json' \\\n  -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NTY4ODkyOTEsImlzcyI6Ik5pbHNhc2sgU29mdHdhcmUgQUIiLCJ1c2VyX2lkIjoxMywidXNlcl9lbWFpbCI6InRlc3RfY3VzdEB0ZXN0LnNlIiwidXNlcl9yb2xlIjozMCwib3JnX2lkIjo0LCJqd3RfdHlwZSI6MTB9._SW0vbBNoXADT5-W_QACIu35CzhmfUV5-9IgsqStbjc'"
+			},
+			"response": []
+		}
+	]
+}
