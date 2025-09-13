@@ -1,7 +1,7 @@
 {
 	"info": {
 		"_postman_id": "3dd17e09-a21d-4373-809a-132ed07917b2",
-		"name": "5. Devices",
+		"name": "5. Devices - GitHub Actions",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_uid": "21661880-3dd17e09-a21d-4373-809a-132ed07917b2"
 	},
@@ -85,13 +85,9 @@
 					"script": {
 						"id": "1725d428-6ec3-43d4-b4f2-e99009c8d94c",
 						"exec": [
-							"// Pre-request script for Create Device",
-							"const existingDevices = pm.environment.get(\"existingDevices\") || [];",
-							"if (existingDevices.includes(pm.iterationData.get(\"imei\"))) {",
-							"    postman.setNextRequest(null); // skip this request",
-							"} ",
-							"",
-							"",
+							"// Generate unique IMEI per request",
+							"let uniqueIMEI = \"string\" + Date.now() + Math.floor(Math.random() * 1000);",
+							"pm.variables.set(\"imei\", uniqueIMEI);",
 							""
 						],
 						"type": "text/javascript",
@@ -121,7 +117,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"description\": \"{{description}}\",\n  \"location_name\": \"{{location_name}}\",\n  \"location_address\": \"{{location_address}}\",\n  \"latitude\": \"{{latitude}}\",\n  \"longitude\": \"{{longitude}}\",\n  \"enabled\": {{enabled}},\n  \"imei\": \"{{imei}}\"\n}\n\n\n\n\n\n",
+					"raw": "{\n  \"description\": \"{{description}}\",\n  \"location_name\": \"{{location_name}}\",\n  \"location_address\": \"{{location_address}}\",\n  \"latitude\": \"{{latitude}}\",\n  \"longitude\": \"{{longitude}}\",\n  \"enabled\": {{enabled}},\n  \"imei\": \"{{imei}}\"\n\n}\n",
 					"options": {
 						"raw": {
 							"language": "json"
