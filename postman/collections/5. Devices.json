@@ -91,6 +91,7 @@
 							"    postman.setNextRequest(null); // skip this request",
 							"} ",
 							"",
+							"",
 							""
 						],
 						"type": "text/javascript",
