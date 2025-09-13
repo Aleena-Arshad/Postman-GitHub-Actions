@@ -79,6 +79,25 @@
 		},
 		{
 			"name": "1. Create Device",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "1725d428-6ec3-43d4-b4f2-e99009c8d94c",
+						"exec": [
+							"// Pre-request script for Create Device",
+							"const existingDevices = pm.environment.get(\"existingDevices\") || [];",
+							"if (existingDevices.includes(pm.iterationData.get(\"imei\"))) {",
+							"    postman.setNextRequest(null); // skip this request",
+							"} ",
+							"",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
 			"id": "ce3b51b4-a40d-4918-b2e2-83c598ec9fb4",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
