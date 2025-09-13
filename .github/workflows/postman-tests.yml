@@ -18,19 +18,10 @@ jobs:
       - name: Login to Postman CLI
         run: postman login --with-api-key ${{ secrets.POSTMAN_API_KEY }}
 
-      # 4. Run only the login request to generate JWT
-      - name: Run Login Request
+      # 4. Run the full collection
+      - name: Run Device Collection
         run: |
           postman collection run "${{ github.workspace }}/postman/collections/5. Devices.json" \
-            --folder "Customer Login" \
             --environment "${{ github.workspace }}/postman/data/Visitoors Staging.postman_environment.json" \
-            --reporter-cli-summary \
-            --export-environment "${{ github.workspace }}/postman/data/temp_env.json"
-
-      # 5. Run Device requests using the JWT and CSV data
-      - name: Run Device Requests
-        run: |
-          postman collection run "${{ github.workspace }}/postman/collections/5. Devices.json" \
-            --environment "${{ github.workspace }}/postman/data/temp_env.json" \
             --iteration-data "${{ github.workspace }}/postman/data/postman-test-data.csv" \
             --reporter-cli-summary
