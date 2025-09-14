@@ -86,8 +86,7 @@
 						"exec": [
 							"// Generate unique IMEI per request",
 							"let uniqueIMEI = \"string\" + Date.now() + Math.floor(Math.random() * 1000);",
-							"pm.variables.set(\"imei\", uniqueIMEI);",
-							""
+							"pm.variables.set(\"imei\", uniqueIMEI);"
 						],
 						"type": "text/javascript",
 						"packages": {}
