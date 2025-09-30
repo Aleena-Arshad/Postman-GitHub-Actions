@@ -90,7 +90,9 @@
 							"",
 							"// GitHub Actions:",
 							"// - uses: actions/checkout@v4",
-							"// “checks out” your repository code into the workflow runner."
+							"// “checks out” your repository code into the workflow runner.",
+							"",
+							""
 						],
 						"type": "text/javascript",
 						"packages": {}
