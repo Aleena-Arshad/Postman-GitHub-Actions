@@ -97,6 +97,19 @@
 						"type": "text/javascript",
 						"packages": {}
 					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "7dd0e18a-b8ae-4376-b1c8-52ce517ec254",
+						"exec": [
+							"let response = pm.response.json();",
+							"",
+							"pm.environment.set(\"device_id\", response.id);"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
 				}
 			],
 			"id": "ce3b51b4-a40d-4918-b2e2-83c598ec9fb4",
@@ -178,7 +191,7 @@
 					}
 				},
 				"url": {
-					"raw": "https://people.nilsask.se/devices/own/38/",
+					"raw": "https://people.nilsask.se/devices/own/{{device_id}}/",
 					"protocol": "https",
 					"host": [
 						"people",
@@ -188,7 +201,7 @@
 					"path": [
 						"devices",
 						"own",
-						"38",
+						"{{device_id}}",
 						""
 					]
 				},
