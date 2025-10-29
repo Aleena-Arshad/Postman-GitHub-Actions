@@ -27,7 +27,9 @@
 						"exec": [
 							"let response = pm.response.json();",
 							"pm.environment.set(\"jwt\", response.jwt);",
-							"// save"
+							"// save",
+							"",
+							"// aleena"
 						],
 						"type": "text/javascript",
 						"packages": {}
