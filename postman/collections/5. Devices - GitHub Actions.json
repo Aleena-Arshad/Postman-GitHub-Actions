@@ -29,7 +29,7 @@
 							"pm.environment.set(\"jwt\", response.jwt);",
 							"// save",
 							"",
-							"// aleena"
+							"// run changes"
 						],
 						"type": "text/javascript",
 						"packages": {}
