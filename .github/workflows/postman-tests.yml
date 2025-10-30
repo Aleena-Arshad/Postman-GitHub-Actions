@@ -1,10 +1,7 @@
 
 name: Automated API tests using Postman CLI - 111
 
-on:
-  pull_request:
-    branches:
-    - main
+on: push
 
 jobs:
   automated-api-tests:
