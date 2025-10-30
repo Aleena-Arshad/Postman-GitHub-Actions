@@ -1,5 +1,5 @@
 
-name: Automated API tests using Postman CLI
+name: Automated API tests using Postman CLI - 1
 
 on: push
 
@@ -21,3 +21,4 @@ jobs:
           postman collection run "${{ github.workspace }}/postman/collections/5. Devices - GitHub Actions.json" \
             --integration-id "180824-${{ github.run_id }}" \
             --iteration-data "${{ github.workspace }}/postman/data/postman-test-data.csv"
+            
