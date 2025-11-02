@@ -1,7 +1,10 @@
+name: Automated API tests using Postman CLI
 
-name: Automated API tests using Postman CLI - 111
-
-on: push
+on:
+  push:
+  pull_request:
+  # schedule:
+  #   - cron: '0 2 * * *'  # Runs daily at 2 AM UTC (currently disabled)
 
 jobs:
   automated-api-tests:
@@ -19,6 +22,4 @@ jobs:
       - name: Run API tests
         run: |
           postman collection run "${{ github.workspace }}/postman/collections/5. Devices - GitHub Actions.json" \
-            --integration-id "180824-${{ github.run_id }}" \
-            --iteration-data "${{ github.workspace }}/postman/data/postman-test-data.csv"
-            
+          --integration-id "180824-${{ github.run_id }}"
