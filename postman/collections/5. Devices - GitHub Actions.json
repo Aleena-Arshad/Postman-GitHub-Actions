@@ -107,7 +107,10 @@
 						"exec": [
 							"let response = pm.response.json();",
 							"",
-							"pm.environment.set(\"device_id\", response.id);"
+							"pm.environment.set(\"device_id\", response.id);",
+							"",
+							"",
+							""
 						],
 						"type": "text/javascript",
 						"packages": {}
