@@ -103,7 +103,7 @@
 							"pm.environment.set(\"device_id\", response.id);",
 							"",
 							"",
-							"// push",
+							"// pushh",
 							""
 						],
 						"type": "text/javascript",
