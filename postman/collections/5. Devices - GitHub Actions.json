@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "3dd17e09-a21d-4373-809a-132ed07917b2",
+		"_postman_id": "290a58ba-84c1-4920-ac17-9066d1b2d209",
 		"name": "5. Devices - GitHub Actions",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_uid": "21661880-3dd17e09-a21d-4373-809a-132ed07917b2"
+		"_uid": "21661880-290a58ba-84c1-4920-ac17-9066d1b2d209"
 	},
 	"item": [
 		{
@@ -12,7 +12,7 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "43db84a0-1974-42d6-9ef1-0ae3d5c824ad",
+						"id": "0447440a-5b5e-4c3e-8f0a-3b315167a3f8",
 						"exec": [
 							""
 						],
@@ -23,20 +23,19 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "b97f330d-7b0f-4bf2-b1ac-a1c7f9b43a66",
+						"id": "b9425e01-94f6-41a1-bea4-2e094dcdfca1",
 						"exec": [
 							"let response = pm.response.json();",
 							"pm.environment.set(\"jwt\", response.jwt);",
-							"// save",
 							"",
-							"// run changesss"
+							""
 						],
 						"type": "text/javascript",
 						"packages": {}
 					}
 				}
 			],
-			"id": "ddc55c0e-7342-4245-8a0e-4ecf89a3f655",
+			"id": "ab748c35-34ac-4274-a71a-9bc79158431a",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -84,16 +83,11 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "1725d428-6ec3-43d4-b4f2-e99009c8d94c",
+						"id": "ca1c75aa-15c6-4891-a24c-7fb775f1a177",
 						"exec": [
 							"// Generate unique IMEI per request",
 							"let uniqueIMEI = \"string\" + Date.now() + Math.floor(Math.random() * 1000);",
 							"pm.variables.set(\"imei\", uniqueIMEI);",
-							"",
-							"// GitHub Actions:",
-							"// - uses: actions/checkout@v4",
-							"// “checks out” your repository code into the workflow runner.",
-							"",
 							""
 						],
 						"type": "text/javascript",
@@ -103,18 +97,21 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "7dd0e18a-b8ae-4376-b1c8-52ce517ec254",
+						"id": "7c0b14a7-4c13-45a7-aaba-0d8b78123a32",
 						"exec": [
 							"let response = pm.response.json();",
+							"pm.environment.set(\"device_id\", response.id);",
 							"",
-							"pm.environment.set(\"device_id\", response.id);"
+							"",
+							"// push",
+							""
 						],
 						"type": "text/javascript",
 						"packages": {}
 					}
 				}
 			],
-			"id": "ce3b51b4-a40d-4918-b2e2-83c598ec9fb4",
+			"id": "6a8aaadc-f6d3-4207-b741-6cab13382cb1",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -157,13 +154,13 @@
 						""
 					]
 				},
-				"description": "Generated from cURL: curl -X 'POST' \\\n  'https://people.nilsask.se/devices/own/' \\\n  -H 'accept: application/json' \\\n  -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NTY4ODU0NjcsImlzcyI6Ik5pbHNhc2sgU29mdHdhcmUgQUIiLCJ1c2VyX2lkIjoxMywidXNlcl9lbWFpbCI6InRlc3RfY3VzdEB0ZXN0LnNlIiwidXNlcl9yb2xlIjozMCwib3JnX2lkIjo0LCJqd3RfdHlwZSI6MTB9.agraTwyQWhcvG0l7mq4syLWUSvM-O3R8wxgTzIVhepQ' \\\n  -H 'Content-Type: application/json' \\\n  -d '{\n  \"description\": \"empty\",\n  \"location_name\": \"empty\",\n  \"location_address\": \"empty\",\n  \"latitude\": \"empty\",\n  \"longitude\": \"empty\",\n  \"enabled\": true,\n  \"imei\": \"string435\"\n}'"
+				"description": "Generated from cURL: curl -X 'POST' \\\n  'https://people.nilsask.se/devices/own/' \\\n  -H 'accept: application/json' \\\n  -H 'Authorization: Bearer {{vault:json-web-token}}' \\\n  -H 'Content-Type: application/json' \\\n  -d '{\n  \"description\": \"empty\",\n  \"location_name\": \"empty\",\n  \"location_address\": \"empty\",\n  \"latitude\": \"empty\",\n  \"longitude\": \"empty\",\n  \"enabled\": true,\n  \"imei\": \"string435\"\n}'"
 			},
 			"response": []
 		},
 		{
 			"name": "2. Update Device",
-			"id": "e6acdf95-5425-4a80-b4f4-e0ddacd402f3",
+			"id": "641decc9-50ae-4d36-be47-d1f79a682d99",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -207,13 +204,13 @@
 						""
 					]
 				},
-				"description": "Generated from cURL: curl -X 'PUT' \\\n  'https://people.nilsask.se/devices/own/38/' \\\n  -H 'accept: application/json' \\\n  -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NTY4ODkyOTEsImlzcyI6Ik5pbHNhc2sgU29mdHdhcmUgQUIiLCJ1c2VyX2lkIjoxMywidXNlcl9lbWFpbCI6InRlc3RfY3VzdEB0ZXN0LnNlIiwidXNlcl9yb2xlIjozMCwib3JnX2lkIjo0LCJqd3RfdHlwZSI6MTB9._SW0vbBNoXADT5-W_QACIu35CzhmfUV5-9IgsqStbjc' \\\n  -H 'Content-Type: application/json' \\\n  -d '{\n  \"description\": \"empty\",\n  \"location_name\": \"empty\",\n  \"location_address\": \"empty\",\n  \"latitude\": \"empty\",\n  \"longitude\": \"empty\",\n  \"enabled\": true\n}'"
+				"description": "Generated from cURL: curl -X 'PUT' \\\n  'https://people.nilsask.se/devices/own/38/' \\\n  -H 'accept: application/json' \\\n  -H 'Authorization: Bearer {{vault:json-web-token}}' \\\n  -H 'Content-Type: application/json' \\\n  -d '{\n  \"description\": \"empty\",\n  \"location_name\": \"empty\",\n  \"location_address\": \"empty\",\n  \"latitude\": \"empty\",\n  \"longitude\": \"empty\",\n  \"enabled\": true\n}'"
 			},
 			"response": []
 		},
 		{
 			"name": "3. Get Devices",
-			"id": "238b873b-c58a-4e0b-b14b-627d37b0c9ed",
+			"id": "4de1733b-11a5-4c2e-bbe5-14b1b7912a72",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -253,7 +250,7 @@
 						}
 					]
 				},
-				"description": "Generated from cURL: curl -X 'GET' \\\n  'https://people.nilsask.se/devices/own/?offset=0&limit=100' \\\n  -H 'accept: application/json' \\\n  -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NTY4ODkyOTEsImlzcyI6Ik5pbHNhc2sgU29mdHdhcmUgQUIiLCJ1c2VyX2lkIjoxMywidXNlcl9lbWFpbCI6InRlc3RfY3VzdEB0ZXN0LnNlIiwidXNlcl9yb2xlIjozMCwib3JnX2lkIjo0LCJqd3RfdHlwZSI6MTB9._SW0vbBNoXADT5-W_QACIu35CzhmfUV5-9IgsqStbjc'"
+				"description": "Generated from cURL: curl -X 'GET' \\\n  'https://people.nilsask.se/devices/own/?offset=0&limit=100' \\\n  -H 'accept: application/json' \\\n  -H 'Authorization: Bearer {{vault:json-web-token}}'"
 			},
 			"response": []
 		}
