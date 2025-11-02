@@ -1,4 +1,4 @@
-description,location_name,location_address,latitude,longitude,enabled
-empty2344,empty243,empty,0.0,0.0,true
-empty2345,empty244,empty,0.1,0.1,true
-empty2346,empty245,empty,0.2,0.2,true
+description,location_name,location_address,latitude,longitude,enabled,imei
+aleena132,empty23,empty234,"324535435435","34534345354",true,23443450094678800
+aleena145,locname1,locaddress1,"111111111","2222342222",true,2340034650961453440
+aleena155,locname2,locaddress2,"333333333","4444444434",false,32400664609534540
