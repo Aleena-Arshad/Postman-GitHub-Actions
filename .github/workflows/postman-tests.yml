@@ -1,7 +1,6 @@
-name: Automated API tests using Postman CLI - 1
+name: Automated API tests using Postman CLI - 111
 
-on:
-  push:
+on: push
 
 jobs:
   automated-api-tests:
@@ -12,11 +11,11 @@ jobs:
       - name: Install Postman CLI
         run: |
           curl -o- "https://dl-cli.pstmn.io/install/linux64.sh" | sh
-
       - name: Login to Postman CLI
         run: postman login --with-api-key ${{ secrets.POSTMAN_API_KEY }}
 
       - name: Run API tests
         run: |
           postman collection run "${{ github.workspace }}/postman/collections/5. Devices - GitHub Actions.json" \
-          --integration-id "180824-${{ github.run_id }}"
+            --integration-id "180824-${{ github.run_id }}" \
+            --iteration-data "${{ github.workspace }}/postman/data/postman-test-data.csv"
