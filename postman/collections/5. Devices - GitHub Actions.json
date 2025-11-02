@@ -109,7 +109,7 @@
 							"",
 							"pm.environment.set(\"device_id\", response.id);",
 							"",
-							"",
+							"// save",
 							""
 						],
 						"type": "text/javascript",
