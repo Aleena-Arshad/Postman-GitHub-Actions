@@ -29,7 +29,7 @@
 							"pm.environment.set(\"jwt\", response.jwt);",
 							"// save",
 							"",
-							"// run changes -"
+							"// run changess"
 						],
 						"type": "text/javascript",
 						"packages": {}
