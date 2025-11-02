@@ -94,7 +94,7 @@
 							"// - uses: actions/checkout@v4",
 							"// “checks out” your repository code into the workflow runner.",
 							"",
-							""
+							"//  push"
 						],
 						"type": "text/javascript",
 						"packages": {}
