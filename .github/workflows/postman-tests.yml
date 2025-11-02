@@ -1,6 +1,10 @@
 name: Automated API tests using Postman CLI - 111
 
-on: push
+on:
+  push:
+  pull_request:
+  schedule:
+    - cron: "0 18 * * *"  # Runs at 11 PM Pakistan time (UTC+5)
 
 jobs:
   automated-api-tests:
